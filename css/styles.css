@@ -1,3 +1,56 @@
-body {
-  font-family: "Inter", sans-serif;
+:root{
+    --color-bg: #fff;
+    --color-blue: #043873;
+    --color-blue-light:#4F9CF9;
+    --color-yellow-light:  #FFE492;
+    --color-gray-light:#CCCCCC;
+
+    --color-text: #212529;
+    --color-white: #fff;
+
+    --font-inter:"Inter", sans-serif;
 }
+
+    /*перднастройки НАЧАЛО*/
+html{
+    box-sizing: border-box; /*уберает бордера во круг блока "-0.3125rem(или -5px)"*/
+}
+*,
+*::before,
+*::after {
+    box-sizing :iherit;
+    
+}
+
+body {
+    font-family:var(--font-inter);
+    font-size:1.125rem; /*alt+z-это перевод "px" в "rem" */
+    line-height:1.5em;
+}
+
+img {
+    max-width: 100%;
+    }
+    
+    ol,
+    ul {
+    list-style: none;
+    }
+    
+    table {
+    border-collapse: collapse;
+    }
+    
+    textarea {
+    white-space: revert;
+    }
+    
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+    /*перднастройки КОНЕЦ*/
+    
+    /*------------------------------------*\
+    #SECTION-GLOBAL
+    \*------------------------------------*/
