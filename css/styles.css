@@ -117,19 +117,19 @@ img {
     .header__flex {
         display: flex;
         justify-content: space-between;
+        align-items: center;            /*выравнивание логотипа по центру (по вертикале)*/
+        gap: 3.75rem;                   /*расстояние между блоками*/
     }
 
-    .header__logo {
-    width:100px;
-    }
+    /* .header__logo {
+    } */
 
     .header__nav {
-    width:100px;
+    margin-left: auto;
     }
 
-    .header__button {
-    width:100px;
-    }
+    /* .header__button {
+    } */
 
     /*модификатор*/
     .header--blue {
@@ -137,7 +137,11 @@ img {
     }
 
     .nav {
-    display: flex;
+    
+    }
+
+    .nav__item {
+    display: block;
     }
 
     .top__button {
