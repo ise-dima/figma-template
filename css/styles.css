@@ -2,7 +2,9 @@
     --color-bg: #fff;
     --color-blue: #043873;
     --color-blue-light:#4F9CF9;
-    --color-yellow-light:  #FFE492;
+    --color-blue-light-hover:#2886fa;
+    --color-yellow-light:#FFE492;
+    --color-yellow-light-hover:#Fdd458;
     --color-gray-light:#CCCCCC;
 
     --color-text: #212529;
@@ -66,7 +68,7 @@ html{
 
 body {
     font-family:var(--font-inter);
-    font-size:100%; /*alt+z-это перевод "px" в "rem" */
+    font-size:100%; 
     line-height:1.5em;
 }
 
@@ -111,10 +113,11 @@ img {
 
     .header {
     width: 100%;
-    height: 90px;
+    /* height: 5.625rem; */
     }
 
     .header__flex {
+        height: 5.625rem;               /*alt+z-это перевод "px" в "rem" */
         display: flex;
         justify-content: space-between;
         align-items: center;            /*выравнивание логотипа по центру (по вертикале)*/
@@ -128,22 +131,64 @@ img {
     margin-left: auto;
     }
 
-    /* .header__button {
-    } */
+    .header__button {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    }
 
     /*модификатор*/
     .header--blue {
     background-color: var(--color-blue);
     }
 
+    /*----------Главное меню ------*/
+
     .nav {
-    
+    display: flex;
+    gap: 0.625rem; 
     }
 
     .nav__item {
     display: block;
+    padding: 0.3125rem 0.625rem;
+    font-style: var(--step-0);
+    color: var(--color-white);
+    border-radius: 5px;
+    transition:1s;      /*замедляет время ищезновения*/
     }
 
-    .top__button {
-    display: flex;
+    .nav__item:hover {  /*:hover-при наведение курсора */
+    background-color:var(--color-blue-light); /*добавляем цвет заднего фона*/
+    transition:1s;      /*замедляет время появления*/
+    }
+
+    /*----------Главное меню ------*/
+
+    .btn {
+    display: block;
+    padding: 1rem 1.5rem;
+    font: 400 var(--step--0)/1.5em var(--font-inter); /*сокращение: жирность шрифта,размер шрифта,/межстрочное расстояние,ШРИФТ какой он будет */
+    border-radius:0.5rem;
+    transition: 0.5s;
+    }
+
+    .btn--primary {
+    background-color: var(--color-blue-light);
+    color: var(--color-white);
+    }
+
+    .btn--primary:hover{
+    background-color: var(--color-blue-light-hover);
+    transition: 0.5s;
+    }
+
+    .btn--secondary {
+    background-color: var(--color-yellow-light);
+    color: var(--color-blue);
+    }
+
+    .btn--secondary:hover{
+    background-color: var(--color-yellow-light-hover);
+    transition: 0.5s;
     }
