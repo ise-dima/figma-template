@@ -10,6 +10,8 @@
     --color-text: #212529;
     --color-white: #fff;
 
+    --height-header:5.625rem;
+
     --font-inter:"Inter", sans-serif;
     /*UTOPIA НАЧАЛО*/
     --step--2: clamp(0.78rem, calc(0.78rem + 0.03vw), 0.80rem); /*0.03vw (vw-это ширина текста на экране)*/
@@ -117,7 +119,7 @@ img {
     }
 
     .header__flex {
-        height: 5.625rem;               /*alt+z-это перевод "px" в "rem" */
+        height:var(--height-header);               /*alt+z-это перевод "px" в "rem" */
         display: flex;
         justify-content: space-between;
         align-items: center;            /*выравнивание логотипа по центру (по вертикале)*/
@@ -167,7 +169,7 @@ img {
 
     .btn {
     display: block;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2.5rem;
     font: 400 var(--step--0)/1.5em var(--font-inter); /*сокращение: жирность шрифта,размер шрифта,/межстрочное расстояние,ШРИФТ какой он будет */
     border-radius:0.5rem;
     transition: 0.5s;
@@ -192,3 +194,74 @@ img {
     background-color: var(--color-yellow-light-hover);
     transition: 0.5s;
     }
+
+    /*ИКОНКА МОБИЛЬНОГО МЕНЮ*/
+
+    .container {
+        display: none; /*исчезает блок "мобильное меню"*/
+        cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 4px;
+        background-color:var(--color-white);
+        margin: 7px 0;
+        transition: 0.4s;
+    }
+    
+    /* Rotate first bar */
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+    
+    /* Fade out the second bar */
+    .change .bar2 {
+        opacity: 0;
+    }
+    
+    /* Rotate last bar */
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+    /*ИКОНКА МОБИЛЬНОГО МЕНЮ КОНЕЦ*/
+
+    /*медиа-запрос (размер сайта)*/
+
+    @media(max-width:1300px){  /*самый лучший вариант писать в 'em'-мах*/    
+        
+        .nav{
+            width: 100vw;
+            position:fixed;
+            left: 0;
+            top: var(--height-header);
+            display:none;
+            background-color: var(--color-blue);
+            padding: 20px 10px;
+            flex-direction: column; /*превратить блоки в колонки*/
+            gap: 20px;
+        }
+
+        .active{ /*обязательно нужно выполнять каскадность*/
+            display:flex;
+        }
+
+        .header__button{
+            display: none;
+        }
+
+        .container{
+            display: inline-block;/*появляется блок "мобильное меню"*/
+        }
+    }
+
+
+    @media(max-width:850px){
+        .header__nav {
+            margin-left:0;
+            }
+        
+    }
+    
