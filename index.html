@@ -1,51 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta property="og:title" content="Whitepace" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://site.com" />
+    <meta property="og:image" content="http://site.com/images/screen.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Whitepace</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <meta property="og:title" content="Whitepace" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://site.com" />
-  <meta property="og:image" content="http://site.com/images/screen.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>Whitepace</title>
-</head>
-<body>
-
-  <header class="header header--blue">
-    <div class="u-container header__flex">
-    <div class="header__logo">
-      <img src="images/svg/logo.svg" alt="logo">
-    </div>
-    <div class="header__nav">
-      <nav id="menu" class="nav">
-        <a class="nav__item" href="#"> Products <img src="images/svg/arrow-down.svg" alt="down"></a>
-        <a class="nav__item" href="#"> Solutions <img src="images/svg/arrow-down.svg" alt="down"></a>
-        <a class="nav__item" href="#"> Resources <img src="images/svg/arrow-down.svg" alt="down"></a>
-        <a class="nav__item" href="#"> Pricing <img src="images/svg/arrow-down.svg" alt="down"></a>
-      </nav>
-    </div>
-    <div class="header__button">
-      <a class="btn btn--secondary" href="#">Login</a>
-      <a class="btn btn--primary" href="#">Try Whitepace free <img src="images/svg/arrow-right.svg" alt=""></a>
-    </div>
-    <div class="header__mobile">
-      <div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+  <body>
+    <header class="header header--blue">
+      <div class="u-container header__flex">
+        <div class="header__logo">
+          <img src="images/svg/logo.svg" alt="logo" />
+        </div>
+        <div class="header__nav">
+          <nav id="menu" class="nav">
+            <a class="nav__item" href="#">
+              Products <img src="images/svg/arrow-down.svg" alt="down"
+            /></a>
+            <a class="nav__item" href="#">
+              Solutions <img src="images/svg/arrow-down.svg" alt="down"
+            /></a>
+            <a class="nav__item" href="#">
+              Resources <img src="images/svg/arrow-down.svg" alt="down"
+            /></a>
+            <a class="nav__item" href="#">
+              Pricing <img src="images/svg/arrow-down.svg" alt="down"
+            /></a>
+          </nav>
+        </div>
+        <div class="header__button">
+          <a class="btn btn--secondary" href="#">Login</a>
+          <a class="btn btn--primary" href="#"
+            >Try Whitepace free <img src="images/svg/arrow-right.svg" alt=""
+          /></a>
+        </div>
+        <div class="header__mobile">
+          <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
-  </header>
-  <script src="js/scripts.js"></script>
-</body>
+    </header>
+
+    <!-- секция ARTICLE -->
+    <section class="article article--blue article--background">
+      <div class="article__box u-container">
+        <div class="article__text">
+          <h1>Get More Done with whitepace</h1>
+          <p>
+            Project management software that enables your teams to collaborate,
+            plan, analyze and manage everyday tasks
+          </p>
+          <p>
+            <a href="Try Whitepace free">
+              <img src="images/svg/arrow-right.svg" alt=""></a>
+          </p>
+        </div>
+        <div class="article__img"></div>
+      </div>
+    </section>
+    <!--/секция ARTICLE -->
+
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
