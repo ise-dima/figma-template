@@ -1,290 +1,422 @@
-:root{
-    --color-bg: #fff;
-    --color-blue: #043873;
-    --color-blue-light:#4F9CF9;
-    --color-blue-light-hover:#2886fa;
-    --color-yellow-light:#FFE492;
-    --color-yellow-light-hover:#Fdd458;
-    --color-gray-light:#CCCCCC;
+:root {
+  --color-bg: #fff;
+  --color-blue: #043873;
+  --color-blue-light: #4f9cf9;
+  --color-blue-light-hover: #2886fa;
+  --color-yellow-light: #ffe492;
+  --color-yellow-light-hover: #fdd458;
+  --color-gray-light: #cccccc;
 
-    --color-text: #212529;
-    --color-white: #fff;
+  --color-text: #212529;
+  --color-white: #fff;
 
-    --height-header:5.625rem;
+  --height-header: 5.625rem;
 
-    --font-inter:"Inter", sans-serif;
-    /*UTOPIA НАЧАЛО*/
-    --step--2: clamp(0.78rem, calc(0.78rem + 0.03vw), 0.80rem); /*0.03vw (vw-это ширина текста на экране)*/
-    --step--1: clamp(0.94rem, calc(0.92rem + 0.09vw), 1.00rem);
-    --step-0: clamp(1.13rem, calc(1.09rem + 0.17vw), 1.25rem);
-    --step-1: clamp(1.35rem, calc(1.29rem + 0.29vw), 1.56rem);
-    --step-2: clamp(1.62rem, calc(1.53rem + 0.46vw), 1.95rem);
-    --step-3: clamp(1.94rem, calc(1.81rem + 0.69vw), 2.44rem);
-    --step-4: clamp(2.33rem, calc(2.13rem + 0.99vw), 3.05rem);
-    --step-5: clamp(2.80rem, calc(2.52rem + 1.40vw), 3.82rem);
+  --font-inter: "Inter", sans-serif;
+  /*UTOPIA НАЧАЛО*/
+  --step--2: clamp(
+    0.78rem,
+    calc(0.78rem + 0.03vw),
+    0.8rem
+  ); /*0.03vw (vw-это ширина текста на экране)*/
+  --step--1: clamp(0.94rem, calc(0.92rem + 0.09vw), 1rem);
+  --step-0: clamp(1.13rem, calc(1.09rem + 0.17vw), 1.25rem);
+  --step-1: clamp(1.35rem, calc(1.29rem + 0.29vw), 1.56rem);
+  --step-2: clamp(1.62rem, calc(1.53rem + 0.46vw), 1.95rem);
+  --step-3: clamp(1.94rem, calc(1.81rem + 0.69vw), 2.44rem);
+  --step-4: clamp(2.33rem, calc(2.13rem + 0.99vw), 3.05rem);
+  --step-5: clamp(2.8rem, calc(2.52rem + 1.4vw), 3.82rem);
 
-    --space-3xs: clamp(0.31rem, calc(0.31rem + 0.00vw), 0.31rem);
-    --space-2xs: clamp(0.56rem, calc(0.55rem + 0.09vw), 0.63rem);
-    --space-xs: clamp(0.88rem, calc(0.86rem + 0.09vw), 0.94rem);
-    --space-s: clamp(1.13rem, calc(1.09rem + 0.17vw), 1.25rem);
-    --space-m: clamp(1.69rem, calc(1.64rem + 0.26vw), 1.88rem);
-    --space-l: clamp(2.25rem, calc(2.18rem + 0.34vw), 2.50rem);
-    --space-xl: clamp(3.38rem, calc(3.27rem + 0.52vw), 3.75rem);
-    --space-2xl: clamp(4.50rem, calc(4.36rem + 0.69vw), 5.00rem);
-    --space-3xl: clamp(6.75rem, calc(6.54rem + 1.03vw), 7.50rem);
+  --space-3xs: clamp(0.31rem, calc(0.31rem + 0vw), 0.31rem);
+  --space-2xs: clamp(0.56rem, calc(0.55rem + 0.09vw), 0.63rem);
+  --space-xs: clamp(0.88rem, calc(0.86rem + 0.09vw), 0.94rem);
+  --space-s: clamp(1.13rem, calc(1.09rem + 0.17vw), 1.25rem);
+  --space-m: clamp(1.69rem, calc(1.64rem + 0.26vw), 1.88rem);
+  --space-l: clamp(2.25rem, calc(2.18rem + 0.34vw), 2.5rem);
+  --space-xl: clamp(3.38rem, calc(3.27rem + 0.52vw), 3.75rem);
+  --space-2xl: clamp(4.5rem, calc(4.36rem + 0.69vw), 5rem);
+  --space-3xl: clamp(6.75rem, calc(6.54rem + 1.03vw), 7.5rem);
 
   /* One-up pairs */
-    --space-3xs-2xs: clamp(0.31rem, calc(0.23rem + 0.43vw), 0.63rem);
-    --space-2xs-xs: clamp(0.56rem, calc(0.46rem + 0.52vw), 0.94rem);
-    --space-xs-s: clamp(0.88rem, calc(0.77rem + 0.52vw), 1.25rem);
-    --space-s-m: clamp(1.13rem, calc(0.92rem + 1.03vw), 1.88rem);
-    --space-m-l: clamp(1.69rem, calc(1.46rem + 1.12vw), 2.50rem);
-    --space-l-xl: clamp(2.25rem, calc(1.84rem + 2.07vw), 3.75rem);
-    --space-xl-2xl: clamp(3.38rem, calc(2.93rem + 2.24vw), 5.00rem);
-    --space-2xl-3xl: clamp(4.50rem, calc(3.67rem + 4.14vw), 7.50rem);
+  --space-3xs-2xs: clamp(0.31rem, calc(0.23rem + 0.43vw), 0.63rem);
+  --space-2xs-xs: clamp(0.56rem, calc(0.46rem + 0.52vw), 0.94rem);
+  --space-xs-s: clamp(0.88rem, calc(0.77rem + 0.52vw), 1.25rem);
+  --space-s-m: clamp(1.13rem, calc(0.92rem + 1.03vw), 1.88rem);
+  --space-m-l: clamp(1.69rem, calc(1.46rem + 1.12vw), 2.5rem);
+  --space-l-xl: clamp(2.25rem, calc(1.84rem + 2.07vw), 3.75rem);
+  --space-xl-2xl: clamp(3.38rem, calc(2.93rem + 2.24vw), 5rem);
+  --space-2xl-3xl: clamp(4.5rem, calc(3.67rem + 4.14vw), 7.5rem);
 
   /* Custom pairs */
-    --space-s-l: clamp(1.13rem, calc(0.75rem + 1.90vw), 2.50rem);
+  --space-s-l: clamp(1.13rem, calc(0.75rem + 1.9vw), 2.5rem);
 
-    --grid-max-width: 77.50rem;
-    --grid-gutter: var(--space-s-l, clamp(1.13rem, calc(0.65rem + 2.39vw), 2.50rem));
-    --grid-columns: 12;
-    /*UTOPIA КОНЕЦ*/
+  --grid-max-width: 77.5rem;
+  --grid-gutter: var(
+    --space-s-l,
+    clamp(1.13rem, calc(0.65rem + 2.39vw), 2.5rem)
+  );
+  --grid-columns: 12;
+  /*UTOPIA КОНЕЦ*/
 }
 
-    /*------------------------------------*\
+/*------------------------------------*\
     #SECTION-GLOBAL
     \*------------------------------------*/
 
-
-    /*перднастройки НАЧАЛО*/
-html{
-    box-sizing: border-box; /*уберает бордера во круг блока "-0.3125rem(или -5px)"*/
+/*перднастройки НАЧАЛО*/
+html {
+  box-sizing: border-box; /*уберает бордера во круг блока "-0.3125rem(или -5px)"*/
 }
 *,
 *::before,
 *::after {
-    box-sizing :iherit;
-    
+  box-sizing: iherit;
 }
 
 body {
-    font-family:var(--font-inter);
-    font-size:100%; 
-    line-height:1.5em;
+  font-family: var(--font-inter);
+  font-size: 100%;
+  line-height: 1.5em;
 }
 
 img {
-    max-width: 100%;
-    }
-    
-    ol,
-    ul {
-    list-style: none;
-    }
-    
-    table {
-    border-collapse: collapse;
-    }
-    
-    textarea {
-    white-space: revert;
-    }
-    
-    a {
-    text-decoration: none;
-    color: inherit;
-    }
-    /*UTOPIA НАЧАЛО*/
-    .u-container {
-    max-width: var(--grid-max-width);
-    padding-inline: var(--grid-gutter);
-    margin-inline: auto;
-    }
-    
-    .u-grid {
-    display: grid;
-    gap: var(--grid-gutter);
-    }
-    /*UTOPIA КОНЕЦ*/
-    /*пред настройки КОНЕЦ*/
-    
-    /*------------------------------------*\
+  max-width: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+textarea {
+  white-space: revert;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*UTOPIA НАЧАЛО*/
+.u-container {
+  max-width: var(--grid-max-width);
+  padding-inline: var(--grid-gutter);
+  margin-inline: auto;
+}
+
+.u-grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
+/*UTOPIA КОНЕЦ*/
+/*пред настройки КОНЕЦ*/
+
+/*------------------------------------*\
     #SECTION
     \*------------------------------------*/
 
-    .header {
-    width: 100%;
-    /* height: 5.625rem; */
-    }
-
-    .header__flex {
-        height:var(--height-header);               /*alt+z-это перевод "px" в "rem" */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;            /*выравнивание логотипа по центру (по вертикале)*/
-        gap: 3.75rem;                   /*расстояние между блоками*/
-    }
-
-    /* .header__logo {
-    } */
-
-    .header__nav {
-    margin-left: auto;
-    }
-
-    .header__button {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    }
-
-    /*модификатор*/
-    .header--blue {
-    background-color: var(--color-blue);
-    }
-
-    /*----------Главное меню ------*/
-
-    .nav {
-    display: flex;
-    gap: 0.625rem; 
-    }
-
-    .nav__item {
-    display: block;
-    padding: 0.3125rem 0.625rem;
-    font-style: var(--step-0);
-    color: var(--color-white);
-    border-radius: 5px;
-    transition:1s;      /*замедляет время ищезновения*/
-    }
-
-    .nav__item:hover {  /*:hover-при наведение курсора */
-    background-color:var(--color-blue-light); /*добавляем цвет заднего фона*/
-    transition:1s;      /*замедляет время появления*/
-    }
-
-    /*----------Главное меню ------*/
-
-    .btn {
-    display: block;
-    padding: 1rem 1.5rem;
-    font: 400 var(--step--1)/1.5em var(--font-inter); /*сокращение: жирность шрифта,размер шрифта,/межстрочное расстояние,ШРИФТ какой он будет */
-    border-radius:0.5rem;
-    transition: 0.5s;
-    }
-
-    .btn--primary {
-    background-color: var(--color-blue-light);
-    color: var(--color-white);
-    }
-
-    .btn--primary:hover{
-    background-color: var(--color-blue-light-hover);
-    transition: 0.5s;
-    }
-
-    .btn--secondary {
-    background-color: var(--color-yellow-light);
-    color: var(--color-blue);
-    }
-
-    .btn--secondary:hover{
-    background-color: var(--color-yellow-light-hover);
-    transition: 0.5s;
-    }
-
-    /*ИКОНКА МОБИЛЬНОГО МЕНЮ*/
-
-    .container {
-        display: none; /*исчезает блок "мобильное меню"*/
-        cursor: pointer;
-    }
-    
-    .bar1, .bar2, .bar3 {
-        width: 35px;
-        height: 4px;
-        background-color:var(--color-white);
-        margin: 7px 0;
-        transition: 0.4s;
-    }
-    
-    /* Rotate first bar */
-    .change .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-        transform: rotate(-45deg) translate(-9px, 6px) ;
-    }
-    
-    /* Fade out the second bar */
-    .change .bar2 {
-        opacity: 0;
-    }
-    
-    /* Rotate last bar */
-    .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-        transform: rotate(45deg) translate(-8px, -8px) ;
-    }
-    /*ИКОНКА МОБИЛЬНОГО МЕНЮ КОНЕЦ*/
-
-    /*медиа-запрос (размер сайта)*/
-
-    @media(max-width:1300px){  /*самый лучший вариант писать в 'em'-мах*/    
-        
-        .nav{
-            width: 100vw;
-            position:fixed;
-            left: 0;
-            top: var(--height-header);
-            display:none;
-            background-color: var(--color-blue);
-            padding: 1.25rem 0.625rem;
-            flex-direction: column; /*превратить блоки в колонки*/
-            gap: 20px;
-        }
-
-        .active{ /*обязательно нужно выполнять каскадность*/
-            display:flex;
-        }
-
-        .header__button{
-            display: none;
-        }
-
-        .container{
-            display: inline-block;/*появляется блок "мобильное меню"*/
-        }
-    }
-
-
-    @media(max-width:850px){
-        .header__nav {
-            margin-left:0;
-            }
-        
-    }
-/*--------------------------------*\ 
-        #SECTION-ARTICLE
-\*--------------------------------*/ 
-
-.article{
-    width: 100%;
-    padding-block:140px; /*-block -это отступ сверху и снизу*/
+.header {
+  width: 100%;
+  /* height: 5.625rem; */
 }
 
-.article--blue {     /*модификатор*/
-background-color:var(--color-blue);
+.header__flex {
+  height: var(--height-header); /*alt+z-это перевод "px" в "rem" */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*выравнивание логотипа по центру (по вертикале)*/
+  gap: 3.75rem; /*расстояние между блоками*/
+}
+
+/* .header__logo {
+    } */
+
+.header__nav {
+  margin-left: auto;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/*модификатор*/
+.header--blue {
+  background-color: var(--color-blue);
+}
+
+/*----------Главное меню ------*/
+
+.nav {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.nav__item {
+  display: block;
+  padding: 0.3125rem 0.625rem;
+  font-style: var(--step-0);
+  color: var(--color-white);
+  border-radius: 5px;
+  transition: 1s; /*замедляет время ищезновения*/
+}
+
+.nav__item:hover {
+  /*:hover-при наведение курсора */
+  background-color: var(--color-blue-light); /*добавляем цвет заднего фона*/
+  transition: 1s; /*замедляет время появления*/
+}
+
+/*----------Главное меню ------*/
+
+.btn {
+  display: block;
+  padding: 1rem 1.5rem;
+  font: 400 var(--step--1) / 1.5em var(--font-inter); /*сокращение: жирность шрифта,размер шрифта,/межстрочное расстояние,ШРИФТ какой он будет */
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.btn--primary {
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-blue-light-hover);
+  transition: 0.5s;
+}
+
+.btn--secondary {
+  background-color: var(--color-yellow-light);
+  color: var(--color-blue);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-yellow-light-hover);
+  transition: 0.5s;
+}
+
+/*ИКОНКА МОБИЛЬНОГО МЕНЮ*/
+
+.container {
+  display: none; /*исчезает блок "мобильное меню"*/
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 4px;
+  background-color: var(--color-white);
+  margin: 7px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+/*ИКОНКА МОБИЛЬНОГО МЕНЮ КОНЕЦ*/
+
+/*медиа-запрос (размер сайта)*/
+
+@media (max-width: 1300px) {
+  /*самый лучший вариант писать в 'em'-мах*/
+
+  .nav {
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: var(--height-header);
+    display: none;
+    background-color: var(--color-blue);
+    padding: 1.25rem 0.625rem;
+    flex-direction: column; /*превратить блоки в колонки*/
+    gap: 20px;
+  }
+
+  .active {
+    /*обязательно нужно выполнять каскадность*/
+    display: flex;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .container {
+    display: inline-block; /*появляется блок "мобильное меню"*/
+  }
+}
+
+@media (max-width: 850px) {
+  .header__nav {
+    margin-left: 0;
+  }
+}
+/*--------------------------------*\ 
+        #SECTION-ARTICLE
+\*--------------------------------*/
+
+.article {
+  width: 100%;
+  padding-block: 140px; /*-block -это отступ сверху и снизу*/
+}
+
+.article--no-padding {
+  padding-top: 0;
+}
+
+.article--blue {
+  /*модификатор*/
+  background-color: var(--color-blue);
 }
 
 .article--background {
-    background-image: url('../images/svg/waves-1.svg');
+  background-image: url("../images/svg/waves-1.svg");
+  background-position: center; /*центрует картинку по середине*/
+  background-repeat: no-repeat; /*убирает повторение картинки*/
+  background-size: cover; /*автоматически растягивает картинку по ширине и высоте*/
+  /*background-size: auto;      /*автоматически растягивает картинку по ширине и высоте*/
+  /*background-size: contain;   /*картинка помещается внутрь блока целиком*/
 }
+
+.article--background-left {
+  background-image: url("../images/svg/background.svg");
+  background-position:left; /*центрует картинку по середине*/
+  background-position-y: 100px;
+  background-repeat: no-repeat; /*убирает повторение картинки*/
+  /*background-size: cover; /*автоматически растягивает картинку по ширине и высоте*/
+  /*background-size: auto;      /*автоматически растягивает картинку по ширине и высоте*/
+  /*background-size: contain;   /*картинка помещается внутрь блока целиком*/
+}
+
 
 .article__box {
-
+  display: flex;
+  gap: var(--space-m);
 }
 
-.article__text, .article__img {
-width: 50%;
+.article__box--revers {
+flex-direction: row-reverse; /*поменять блоки местами(реверс)*/
+}
+
+.article__text,
+.article__img {
+  width: 50%;
+}
+
+.article__text {
+    display: grid;
+    place-content: center;
+}
+
+.article__title {
+    margin: 0;
+  font: 700 var(--step-5) / 1.4em var(--font-inter); /*жирность,размер шрифта,межстрочная высота,стиль шрифта*/
+}
+
+.article__title span {
+  background-image: url("../images/svg/back-title.svg");
+  /*background-position:bottom; /*центрует картинку по середине*/
+  background-position-y: 50px;
+  background-repeat: no-repeat; /*убирает повторение картинки*/
+  /*background-size: cover; /*автоматически растягивает картинку по ширине и высоте*/
+  /*background-size: auto;      /*автоматически растягивает картинку по ширине и высоте*/
+  /*background-size: contain;   /*картинка помещается внутрь блока целиком*/
+}
+
+.article__title--white {
+  color: var(--color-white);
+}
+
+.article__note {
+  font: 400 var(--step-0) / 1.7em var(--font-inter); /*жирность,размер шрифта,межстрочная высота,стиль шрифта*/
+}
+
+.article__note--white {
+    color: var(--color-white);
+}
+
+.article__button {
+    margin-top: var(--step-4);
+    width: 260px;
+}
+
+.article__img img {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .article__box {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .article__text,
+  .article__img {
+  width: 100%;
+}
+
+  .article__title, .article__note {
+    text-align: center;
+  }
+
+  .article__button {
+    margin-inline: auto;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.slide {
+  border: 1px solid var(--color-yellow-light-hover);
+  border-radius: 10px;
+  padding: 40px 44px;
+}
+
+.slide__title {
+  font: 600 var(--step-1) / 1.5em var(--font-inter); /*жирность,размер шрифта,межстрочная высота,стиль шрифта*/
+}
+
+.slide__price {
+  font: 600 var(--step-2) / 1.5em var(--font-inter); /*жирность,размер шрифта,межстрочная высота,стиль шрифта*/
+}
+
+.slide__note {
+  font: 400 var(--step-0) / 1.5em var(--font-inter); /*жирность,размер шрифта,межстрочная высота,стиль шрифта*/
+}
+
+.slide__list {
+  padding-left: 28px;
+  font: 400 var(--step--1) / 1.5em var(--font-inter); /*жирность,размер шрифта,межстрочная высота,стиль шрифта*/
+}
+
+.slide__list li:not(:first-child){ /*li:not(:first-child)--применяется "li" если он первый в списке*/
+  padding-top: 28px;               /*то есть мы применяем падинг но к первому "li" паденг не применяется*/
+}
+
+.slide__list li {
+  list-style-image:url(../images/svg/bullet.svg); /*list-style-image:url-это svg картинка*/
 }

@@ -17,6 +17,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/styles.css" />
     <title>Whitepace</title>
   </head>
@@ -46,7 +51,8 @@
         <div class="header__button">
           <a class="btn btn--secondary" href="#">Login</a>
           <a class="btn btn--primary" href="#"
-            >Try Whitepace free <img src="images/svg/arrow-right.svg" alt=""
+            >Try Whitepace free
+            <img src="images/svg/arrow-right.svg" alt="arrow-right"
           /></a>
         </div>
         <div class="header__mobile">
@@ -63,20 +69,169 @@
     <section class="article article--blue article--background">
       <div class="article__box u-container">
         <div class="article__text">
-          <h1>Get More Done with whitepace</h1>
-          <p>
+          <h1 class="article__title article__title--white">
+            Get More Done with whitepace
+          </h1>
+          <p class="article__note article__note--white">
             Project management software that enables your teams to collaborate,
             plan, analyze and manage everyday tasks
           </p>
-          <p>
-            <a href="Try Whitepace free">
-              <img src="images/svg/arrow-right.svg" alt=""></a>
-          </p>
+          <div class="article__button">
+            <a class="btn btn--primary" href="#"
+              >Try Whitepace free
+              <img src="images/svg/arrow-right.svg" alt="arrow-right"
+            /></a>
+          </div>
         </div>
-        <div class="article__img"></div>
+        <div class="article__img">
+          <img
+            src="https://picsum.photos/800/580"
+            alt="Get More Done with whitepace"
+          />
+        </div>
       </div>
     </section>
     <!--/секция ARTICLE -->
+
+    <section class="article article--background-left">
+      <div class="u-container article__box">
+        <div class="article__text">
+          <h2 class="article__title">Project <span>Management</span></h2>
+          <p class="article__note">
+            Images, videos, PDFs and audio files are supported. Create math
+            expressions and diagrams directly from the app. Take photos with the
+            mobile app and save them to a note.
+          </p>
+          <div class="article__button">
+            <a class="btn btn--primary" href="#"
+              >Get Started
+              <img src="images/svg/arrow-right.svg" alt="arrow-right"
+            /></a>
+          </div>
+        </div>
+        <div class="article__img">
+          <img
+            src="https://picsum.photos/seed/picsum/800/580"
+            alt="Get More Done with whitepace"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="article article--no-padding">
+      <div class="u-container article__box article__box--revers">
+        <div class="article__text">
+          <h2 class="article__title">Work <span>together</span></h2>
+          <p class="article__note">
+            With whitepace, share your notes with your colleagues and
+            collaborate on them. You can also publish a note to the internet and
+            share the URL with others.
+          </p>
+          <div class="article__button">
+            <a class="btn btn--primary" href="#"
+              >Try it now
+              <img src="images/svg/arrow-right.svg" alt="arrow-right"
+            /></a>
+          </div>
+        </div>
+        <div class="article__img">
+          <img
+            src="images/svg/system-sun.svg"
+            alt="Get More Done with whitepace"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="article article--blue">
+      <div class="u-container article__box">
+        <div class="article__text">
+          <h2 class="article__title article__title--white">
+            Use as <span>Extension</span>
+          </h2>
+          <p class="article__note article__note--white">
+            Use the web clipper extension, available on Chrome and Firefox, to
+            save web pages or take screenshots as notes.
+          </p>
+          <div class="article__button">
+            <a class="btn btn--primary" href="#"
+              >Let’s Go <img src="images/svg/arrow-right.svg" alt="arrow-right"
+            /></a>
+          </div>
+        </div>
+        <div class="article__img">
+          <img
+            src="https://picsum.photos/800/580"
+            alt="Get More Done with whitepace"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="article">
+      <div class="u-container article__box article__box--revers">
+        <div class="article__text">
+          <h2 class="article__title">
+            Customise it to <span>your needs</span>
+          </h2>
+          <p class="article__note">
+            Customise the app with plugins, custom themes and multiple text
+            editors (Rich Text or Markdown). Or create your own scripts and
+            plugins using the Extension API.
+          </p>
+          <div class="article__button">
+            <a class="btn btn--primary" href="#"
+              >Let’s Go <img src="images/svg/arrow-right.svg" alt="arrow-right"
+            /></a>
+          </div>
+        </div>
+        <div class="article__img">
+          <img
+            src="https://picsum.photos/800/580"
+            alt="Get More Done with whitepace"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- КАРУСЕЛЬ JS -->
+
+    <section>
+      <div class="u-container">
+        <!-- Основной контейнер слайдера -->
+        <div class="swiper">
+          <!-- Дополнительная необходимая обертка -->
+          <div class="swiper-wrapper">
+            <!-- Слайды -->
+            <div class="swiper-slide">
+              <div class="slide">
+                <h3 class="slide__title">Free</h3>
+                <div class="slide__price">$0</div>
+                <div class="slide__note">Capture ideas and find them quickly</div>
+                <ul class="slide__list">
+                  <li>Sync unlimited devices</li>
+                  <li>10 GB monthly uploads</li>
+                  <li>200 MB max. note size</li>
+                  <li>Customize Home dashboard and access extra widgets</li>
+                  <li>Connect primary Google Calendar account</li>
+                  <li>Add due dates, reminders, and notifications to your tasks</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+          </div>
+          <!-- Если нам нужна нумерация страниц -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <br />
+    <br />
+    <br />
+    <br />
 
     <script src="js/scripts.js"></script>
   </body>
